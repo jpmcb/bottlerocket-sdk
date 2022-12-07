@@ -475,7 +475,7 @@ FROM sdk-libc as sdk-go
 
 ARG ARCH
 ARG TARGET="${ARCH}-bottlerocket-linux-gnu"
-ARG GOVER="1.19.3"
+ARG GOVER="1.19.4"
 
 USER root
 RUN dnf -y install golang
@@ -687,9 +687,9 @@ RUN \
   mkdir -p /usr/libexec/tools /usr/share/licenses/govmomi && \
   chown -R builder:builder /usr/libexec/tools /usr/share/licenses/govmomi
 
-ARG GOVMOMIVER="0.29.0"
-ARG GOVMOMISHORTCOMMIT="69ac849"
-ARG GOVMOMIDATE="2022-07-06T16:00:32Z"
+ARG GOVMOMIVER="0.30.2"
+ARG GOVMOMISHORTCOMMIT="9078b0b"
+ARG GOVMOMIDATE="2023-01-31:00:32Z"
 
 USER builder
 WORKDIR ${GOPATH}/src/github.com/vmware/govmomi
